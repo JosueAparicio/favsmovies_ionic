@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "234443214764",
+    "project_id": "favs-movies",
+    "storage_bucket": "favs-movies.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234443214764:android:a4ce98a6f0d7fc6518b409",
+        "android_client_info": {
+          "package_name": "com.pragma.favsmovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234443214764-d8fdpvhv32hpom42o1b2qac5a68fft4k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pragma.favsmovies",
+            "certificate_hash": "7d70723975f6d67edf9b7951b702f17536f7a24e"
+          }
+        },
+        {
+          "client_id": "234443214764-i1bj7o6prh81grkv7nc9l3t9d48d25rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMjpsOE0abfVjimqW_-UQg1AD_DdRqquY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234443214764-i1bj7o6prh81grkv7nc9l3t9d48d25rf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

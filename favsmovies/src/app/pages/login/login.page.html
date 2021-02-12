@@ -1,0 +1,46 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <img class="main-imagelogo" src="../../../assets/icon/main_icon.png" alt="main icon">
+
+    <ion-text>
+      <h1>Hello.</h1>
+      <p>Get started by logging <br>your account.</p>
+    </ion-text>
+    <div class="content-image" >
+      <img class="main-imagelogin" src="../../../assets/images/second_logo.png" alt="main image">
+
+    </div>
+
+
+  <div class="actions">
+    <div class="login-buttons">
+      <ion-button (click)="loginGoogle()">
+        <ion-avatar>
+          <img src="../../../assets/images/g.png" alt="image-banner">
+        </ion-avatar>
+        <ion-label>Google</ion-label>
+      </ion-button>
+
+      <ion-button (click)="loginTwitter()">
+        <ion-avatar>
+          <img src="../../../assets/images/tt.png" alt="image-banner">
+        </ion-avatar>
+        <ion-label>Twitter</ion-label>
+      </ion-button>
+
+    </div>
+
+    <div class="separator">
+      <span>or</span>
+      <span class="line left"></span>
+      <span class="line rigth"></span>
+    </div>
+
+    <ion-button class="freesign-btn" expand="block">Login without account</ion-button>
+  </div>
+
+</ion-content>

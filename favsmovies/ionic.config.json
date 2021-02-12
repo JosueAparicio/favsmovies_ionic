@@ -1,0 +1,8 @@
+{
+  "name": "favsmovies",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

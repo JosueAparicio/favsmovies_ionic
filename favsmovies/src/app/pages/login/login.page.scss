@@ -1,0 +1,101 @@
+
+*{
+    font-weight: 300;
+}
+
+
+
+ion-text{
+    position: absolute;
+    h1{
+        font-size: 42px;
+    }
+    p{
+        font-size: 14px;
+        color: #696969;
+    }
+}
+
+.main-imagelogin{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.content-image{
+    padding-right: 16px;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+}
+
+.main-imagelogo{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 70px;
+}
+
+.actions{
+    position: absolute;
+    width: 90%;
+    bottom: 45px;
+    
+}
+
+ion-button{
+    --border-radius: 9px;
+    --border-shadow: none;
+    text-transform: initial;
+    font-size: 13px;
+}
+
+.login-buttons{
+    display: flex;
+    justify-content: space-between;
+
+    ion-button{
+        width: 45%;
+        --background: transparent;
+        --color: #3b3b3b;
+        --border-style: solid;
+        --boder-color: #3b3b3b;
+        --border-width: 0.5px;
+    }
+
+    ion-avatar{
+        height: 12px;
+        width: 12px;
+        margin-right: 7px;
+        margin-bottom: 1px;
+    }
+}
+
+.separator{
+    display: flex;
+    justify-content: center;
+    margin: 8px auto 10px;
+    font-size: 12px;
+    position: relative;
+
+    .line{
+        position: absolute;
+        border-top: 1px solid #3b3b3b;
+        width: 50px;
+        height: 2px;
+        top: 8px;
+    }
+
+    .rigth{
+        right: 98px;
+    }
+
+    .left{
+        left: 98px;
+    }
+}
+
+.freesign-btn{
+    --background: linear-gradient(90deg, #8c36a5 0%, #664bdc 100%);
+}
+

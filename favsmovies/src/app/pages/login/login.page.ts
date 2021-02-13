@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { ToastController } from '@ionic/angular';
 export class LoginPage implements OnInit {
 
   public user: any = null;
-  constructor(private auth: AuthService, public toastController: ToastController) { }
+  constructor(private auth: AuthService, public toastController: ToastController, private _router: Router) { }
 
   ngOnInit() {
     this.auth.currentUser.subscribe(user => {
@@ -19,6 +20,7 @@ export class LoginPage implements OnInit {
       console.log(this.user);
       if (this.user) {
         this.presentToast('Logeado');
+        //this._router.navigate(['allmovies']);
       } else {
         this.presentToast('No Logeado');
 
@@ -33,9 +35,7 @@ export class LoginPage implements OnInit {
     //console.log(user.user);
   }
 
-  signOut() {
-    this.auth.signOut();
-  }
+
 
   async loginTwitter(){
     await this.auth.loginTwitter();

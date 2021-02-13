@@ -1,9 +1,52 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>allmovies</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title slot="end">All Movies</ion-title>
   </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>
+  <ion-searchbar [(ngModel)] = "term" (ionChange)="searchChanged($event)"></ion-searchbar>
 
+  <ion-item >
+    <ion-label>Select search type</ion-label>
+    <ion-select  [(ngModel)] = "type" (ionChange) ="searchChanged($event)" >
+      <ion-select-option selected="true" value="">All</ion-select-option>
+      <ion-select-option value="movie">Movies</ion-select-option>
+      <ion-select-option value="series">Series</ion-select-option>
+      <ion-select-option value="episode">Episodes</ion-select-option>
+      <ion-select-option value="game">Games</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list *ngIf="total > 0">
+    <ion-item button *ngFor="let movie of (result | async)" [routerLink]="['/movie-details/' + movie.imdbID]">
+
+      <ion-thumbnail slot="start">
+        <img src="{{movie.Poster}}" alt="{{movie.Title}}" *ngIf="movie.Poster != 'N/A'">
+        <img src="../../../assets/images/respaldo.jpg" alt="{{movie.Title}}" *ngIf="movie.Poster == 'N/A'">
+
+      </ion-thumbnail>
+      <ion-label text-wrap>
+        <h3>{{movie.Title}}</h3>
+        {{movie.Year}}
+      </ion-label>
+      <ion-icon slot="end" *ngIf="movie.Type == 'movie'" name = "videocam"></ion-icon>
+      <ion-icon slot="end" *ngIf="movie.Type == 'series'" name = "tv"></ion-icon>
+      <ion-icon slot="end" *ngIf="movie.Type == 'episode'" name = "tablet-portrait-outline"></ion-icon>
+      <ion-icon slot="end" *ngIf="movie.Type == 'game'" name="game-controller-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-card *ngIf="total == 0">
+    <ion-card-header>
+      <ion-card-title>Find your favorite</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Search your favorites and filter them as you want.
+      If you don't have a result, remember to be specific in your searches.
+    </ion-card-content>
+  </ion-card>
 </ion-content>

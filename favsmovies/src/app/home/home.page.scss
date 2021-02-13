@@ -65,3 +65,10 @@ p {
 p b {
   color: var(--ion-text-color, #000000);
 }
+
+.my-custom-class-await{
+  --background: #222;
+  --spinner-color: #fff;
+
+  color: #fff;
+}
